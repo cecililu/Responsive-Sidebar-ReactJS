@@ -80,7 +80,7 @@ export const Sidebar = ({ children ,setresizer,resizer}) => {
           </button></div>:''}
         { sideBarOpen[1]?<>
           
-        <div className="bg-indigo-900 text-sm text-white px-2 py-5" >
+        <div className="bg-indigo-900 text-sm text-white px-2 py-5 border-dotted border-r-2 border-white" >
           <p className="pl-2">Lalitpur District Disaster Portal</p>
         </div>
         <div
