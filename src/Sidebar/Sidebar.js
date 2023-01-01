@@ -71,7 +71,19 @@ export const Sidebar = ({ children ,setresizer,resizer}) => {
   return (
     <div className="sidebar-container ">
       <motion.div animate={{ width: sideBarOpen[1]?'500px':'30px'}} className="side-bar">
-      <div
+        {!sideBarOpen[1]?<div
+          className="text-white flex justify-end border-rounded cursor-pointer "
+          onClick={handlerSideBarOpen}
+        >
+          <button className="bg-red-600 m-1 rounded-full hover:rounded-lg p-2 " >
+            {sideBarOpen[0]}
+          </button></div>:''}
+        { sideBarOpen[1]?<>
+          
+        <div className="bg-indigo-900 text-sm text-white px-2 py-5" >
+          <p className="pl-2">Lalitpur District Disaster Portal</p>
+        </div>
+        <div
           className="text-white flex justify-end border-rounded cursor-pointer "
           onClick={handlerSideBarOpen}
         >
@@ -79,11 +91,6 @@ export const Sidebar = ({ children ,setresizer,resizer}) => {
             {sideBarOpen[0]}
           </button>
         </div>
-        { sideBarOpen[1]?<>
-        <div className="bg-indigo-900 text-sm text-white px-2 py-5" >
-          <p className="pl-2">Lalitpur District Disaster Portal</p>
-        </div>
-        
         <div className="flex pt-3 px-3  ">
           {routes.map((index) => {
             return (
