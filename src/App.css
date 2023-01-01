@@ -1,5 +1,17 @@
 .side-bar{
-  background: black;
-  color: white;
+  background:rgb(212, 209, 209);
+  border-radius: 5px;
   height:100vh
 }
+/* /* } */
+/* 
+.row-icons{
+  display:flex;
+  padding: 5px;
+
+}
+.icon-elements{
+  padding: 5px;
+  margin: 5px;
+  background-color: aliceblue;
+} */ 
