@@ -12,7 +12,7 @@ import { Alert } from "./Alert";
 import { Chart } from "./Chart";
 import { Event } from "./Event";
 
-export const Sidebar = ({ children }) => {
+export const Sidebar = ({ children ,setresizer,resizer}) => {
   
   
   
@@ -23,6 +23,10 @@ export const Sidebar = ({ children }) => {
   console.log(sideBarOpen, "state now");
   const handlerSideBarOpen = () => {
     
+    if(sideBarOpen[1]){
+      setresizer('200vh')
+   }else{
+     setresizer('140vh')} 
     if (sideBarOpen[0].type == (<AiOutlineDoubleLeft size={10} />).type) {
       console.log("ran first check");
       setsideBarOpen([<AiOutlineDoubleRight size={10} />,0]);

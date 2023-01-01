@@ -1,7 +1,7 @@
 
 import { Sidebar } from '../Sidebar/Sidebar'
 import { TileLayer, MapContainer, GeoJSON ,Marker,Popup} from "react-leaflet";
-import React from "react";
+import React, { useState } from "react";
 import "leaflet/dist/leaflet.css";
 import { MainMap } from '../MapElements/MainMap';
 import {
@@ -30,17 +30,18 @@ const routes = [
 
 export const Dashboard = () => {
     
+    const [resizer, setresizer] = useState('142vh')
     const position = [51.505, -0.09]
     return (
-    <div className='flex'>
+    <div className='flex '>
          <div>
-       <Sidebar/>  
+       <Sidebar setresizer={setresizer} resizer={resizer}/>  
         </div>
    
        <div>
-       <MainMap/>
+       <MainMap resizer={resizer}/>
       </div>
-      <div className="flex flex-col justify-center text-white w-24 bg-indigo-900 ">
+      <div className="flex flex-col justify-center text-white w-24 bg-indigo-900 absolute top-0 right-0">
       {routes.map((index) => {
             return (
               <center>
