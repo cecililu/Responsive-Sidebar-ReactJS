@@ -45,7 +45,7 @@ export const Dashboard = () => {
             return (
               <center>
             
-                <div key={index.name} className="p-5 border-b-2 bg-gray-500 border-white-600 hover:bg-gray-400 hover:text-white cursor-pointer">
+                <div key={index.name} className="p-5 border-b-2 bg-indigo-900 border-white-600 hover:bg-indigo-800 hover:text-white cursor-pointer">
                   
                     <span>{index.icon}</span>
                   

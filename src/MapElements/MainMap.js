@@ -10,7 +10,7 @@ export const MainMap = () => {
   const LalitpurStyle = {
     fillColor: "red",
     fillOpacity: 0,
-    color: "black",
+    color: "blue",
     weight: 1,
   };
 

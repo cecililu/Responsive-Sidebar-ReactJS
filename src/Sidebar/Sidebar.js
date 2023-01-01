@@ -51,7 +51,7 @@ export const Sidebar = ({ children }) => {
   return (
     <div className="sidebar-container ">
       <motion.div animate={{ width: "500px" }} className="side-bar">
-        <div className="bg-indigo-900 text-sm text-white px-2 py-3">
+        <div className="bg-indigo-900 text-sm text-white px-2 py-5">
           <p className="pl-2">Lalitpur District Disaster Portal</p>
         </div>
         <div
@@ -63,11 +63,10 @@ export const Sidebar = ({ children }) => {
             {sideBarOpen}
           </button>
         </div>
-        <div className="flex pt-3 px-3 border-t-2 border-b-2">
+        <div className="flex pt-3 px-3  ">
           {routes.map((index) => {
             return (
-              
-                <div key={index.name} className="p-5 mr-4  border-t-2 border-indigo-600 hover:bg-gray-400 hover:text-white cursor-pointer">
+                <div key={index.name} className="p-7 mr-2  border-t-2 border-indigo-600 hover:bg-gray-300 hover:text-white cursor-pointer">
                   <center>
                     <span>{index.icon}</span>
                   </center>
