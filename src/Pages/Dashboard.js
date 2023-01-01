@@ -44,9 +44,7 @@ export const Dashboard = () => {
       {routes.map((index) => {
             return (
               <center>
-            
                 <div key={index.name} className="p-5 border-b-2 bg-indigo-900 border-white-600 hover:bg-indigo-800 hover:text-white cursor-pointer">
-                  
                     <span>{index.icon}</span>
                   
                   <p className="text-[10px] pt-1">{index.name}</p>
