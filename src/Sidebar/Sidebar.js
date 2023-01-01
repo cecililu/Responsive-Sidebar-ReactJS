@@ -18,7 +18,7 @@ export const Sidebar = ({ children ,setresizer,resizer}) => {
   
   
   const [sideBarOpen, setsideBarOpen] = useState(
-    [<AiOutlineDoubleLeft size={10} />,1]
+    [<AiOutlineDoubleRight size={10} />,0]
   );
   console.log(sideBarOpen, "state now");
   const handlerSideBarOpen = () => {
@@ -72,7 +72,7 @@ export const Sidebar = ({ children ,setresizer,resizer}) => {
     <div className="sidebar-container ">
       <motion.div animate={{ width: sideBarOpen[1]?'500px':'30px'}} className="side-bar">
       <div
-          className="text-white flex justify-end border-rounded cursor-pointer bg-indigo-900"
+          className="text-white flex justify-end border-rounded cursor-pointer "
           onClick={handlerSideBarOpen}
         >
           <button className="bg-red-600 m-1 rounded-full hover:rounded-lg p-2 " >

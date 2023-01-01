@@ -18,7 +18,7 @@ export const MainMap = ({resizer}) => {
 
  return (
     <div>
-      <MapContainer center={[27.5500, 85.31]} zoom={12} scrollWheelZoom={false}  style={{width:'192vh',height:'100vh'}}>
+      <MapContainer center={[27.5500, 85.31]} zoom={12} scrollWheelZoom={false}  style={{width:'189vh',height:'100vh'}}>
         <GeoJSON data={district.features} pathOptions={LalitpurStyle} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
