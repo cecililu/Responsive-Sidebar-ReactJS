@@ -4,8 +4,29 @@ import { TileLayer, MapContainer, GeoJSON ,Marker,Popup} from "react-leaflet";
 import React from "react";
 import "leaflet/dist/leaflet.css";
 import { MainMap } from '../MapElements/MainMap';
+import {
+  AiFillAlert,
+  AiFillSignal,
+  AiFillEnvironment,
+  AiOutlineDoubleLeft,
+  AiOutlineDoubleRight,
+} from "react-icons/ai";
 
-
+const routes = [
+  {
+    name: "Alert",
+    icon: <AiFillAlert size={24} />,
+  },
+  {
+    name: "Events",
+    icon: <AiFillEnvironment size={24}/>,
+  },
+  ,
+  {
+    name: "Charts",
+    icon: <AiFillSignal size={24}/>,
+  },
+];
 
 export const Dashboard = () => {
     
@@ -13,13 +34,27 @@ export const Dashboard = () => {
     return (
     <div className='flex'>
          <div>
-       <Sidebar/>
-       
-    </div>
+       <Sidebar/>  
+        </div>
    
-    <div>
-      <MainMap/>
-    </div>
+       <div>
+       <MainMap/>
+      </div>
+      <div className="flex flex-col bg-indigo-900 text-white w-full py-5 ">
+      {routes.map((index) => {
+            return (
+              <center>
+            
+                <div key={index.name} className="p-5 border-b-2 border-white-600 hover:bg-gray-400 hover:text-white cursor-pointer">
+                  
+                    <span>{index.icon}</span>
+                  
+                  <p className="text-[10px] pt-1">{index.name}</p>
+                </div>
+                </center>
+            );
+          })}
+      </div>
     </div>
    
   )
