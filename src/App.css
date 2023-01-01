@@ -3,15 +3,9 @@
   border-radius: 5px;
   height:100vh
 }
-/* /* } */
-/* 
-.row-icons{
-  display:flex;
-  padding: 5px;
-
+.leaflet-container{
+  width: 100vh;
+  height: 100vh;
+ 
 }
-.icon-elements{
-  padding: 5px;
-  margin: 5px;
-  background-color: aliceblue;
-} */ 
+

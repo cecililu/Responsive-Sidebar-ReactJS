@@ -65,18 +65,19 @@ export const Sidebar = ({ children }) => {
         <div className="flex pt-3 px-3 border-t-2 border-b-2">
           {routes.map((index) => {
             return (
-              <>
-                <div className="p-5 mr-2  border-t-2 border-indigo-600 hover:bg-gray-400 hover:text-white cursor-pointer">
+              
+                <div key={index.name} className="p-5 mr-2  border-t-2 border-indigo-600 hover:bg-gray-400 hover:text-white cursor-pointer">
                   <center>
                     <span>{index.icon}</span>
                   </center>
                   <p className="text-[10px] pt-1">{index.name}</p>
                 </div>
-              </>
+              
             );
           })}
         </div>
       </motion.div>
+    
     </div>
   );
 };
