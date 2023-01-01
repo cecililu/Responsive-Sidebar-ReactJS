@@ -40,7 +40,7 @@ export const Dashboard = () => {
        <div>
        <MainMap/>
       </div>
-      <div className="flex flex-col bg-indigo-900 text-white w-full py-5 ">
+      <div className="flex flex-col justify-center bg-indigo-900 text-white w-full  ">
       {routes.map((index) => {
             return (
               <center>

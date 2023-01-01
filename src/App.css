@@ -1,10 +1,6 @@
-.side-bar{
-  background:rgb(212, 209, 209);
-  border-radius: 5px;
-  height:100vh
-}
+
 .leaflet-container{
-  width: 140vh;
+  width: 142vh;
   height: 100vh;
 
 }

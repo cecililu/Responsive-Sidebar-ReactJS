@@ -8,6 +8,7 @@ import {
   AiOutlineDoubleRight,
 } from "react-icons/ai";
 import "../App.css";
+import { Alert } from "./Alert";
 
 const routes = [
   {
@@ -46,9 +47,9 @@ export const Sidebar = ({ children }) => {
       setsideBarOpen(<AiOutlineDoubleLeft size={10} />);
     }
   };
-
+ const [selectedOption, setselectedOption] = useState()
   return (
-    <div className="sidebar-container">
+    <div className="sidebar-container bg-gray-200">
       <motion.div animate={{ width: "500px" }} className="side-bar">
         <div className="bg-indigo-900 text-sm text-white px-2 py-3">
           <p className="pl-2">Lalitpur District Disaster Portal</p>
@@ -70,12 +71,20 @@ export const Sidebar = ({ children }) => {
                   <center>
                     <span>{index.icon}</span>
                   </center>
-                  <p className="text-[10px] pt-1">{index.name}</p>
+                  <p className="text-[12px] pt-1">{index.name}</p>
                 </div>
               
             );
           })}
+        <div className="ml-10 flex flex-col p-2">
+        <span className="text-gray-700 text-[11px]">Date: 2022/2/3- 2022/4/3 </span>
+        <div className="text-gray-700 text-[11px] ">Source: <center><div className="bg-red-700 text-white text-[11px] rounded-lg w-1/3"> Live</div></center></div>
+        
         </div>
+          
+        </div>
+        
+        <Alert/>
       </motion.div>
     
     </div>

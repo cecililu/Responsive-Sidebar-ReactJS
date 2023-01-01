@@ -16,7 +16,7 @@ export const MainMap = () => {
 
   return (
     <div>
-      <MapContainer center={[27.5602, 85.31]} zoom={11} scrollWheelZoom={false}>
+      <MapContainer center={[27.5602, 85.31]} zoom={12} scrollWheelZoom={false}>
         <GeoJSON data={district.features} pathOptions={LalitpurStyle} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
