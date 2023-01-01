@@ -28,12 +28,21 @@ const routes = [
 export const Sidebar = ({ children }) => {
   const [sideBarOpen, setsideBarOpen] = useState(
     <AiOutlineDoubleLeft size={10} />
+    
   );
+  console.log(sideBarOpen,'state now')
   const handlerSideBarOpen = () => {
-    if (sideBarOpen === <AiOutlineDoubleLeft size={10} />) {
+    // console.log(sideBarOpen,'side bar open')
+    // console.log(<AiOutlineDoubleLeft size={10} />)
+    // console.log('check',sideBarOpen.type==(<AiOutlineDoubleLeft size={10}/>).type)
+    if (sideBarOpen.type ==(<AiOutlineDoubleLeft size={10} />).type) {
+        console.log('ran first check')
       setsideBarOpen(<AiOutlineDoubleRight size={10} />);
-    } else if (sideBarOpen === <AiOutlineDoubleRight size={10} />);
+      return
+    }
+     if (sideBarOpen .type== (<AiOutlineDoubleRight size={10} />).type);
     {
+        console.log('ran second check')
       setsideBarOpen(<AiOutlineDoubleLeft size={10} />);
     }
   };
@@ -48,12 +57,12 @@ export const Sidebar = ({ children }) => {
           className="text-white flex justify-end border-rounded cursor-pointer"
           onClick={handlerSideBarOpen}
         >
-          <div className="bg-indigo-900 m-1 rounded-full p-2">
-            {" "}
+          <button className="bg-red-600 m-1 rounded-full hover:rounded-lg p-2 ">
+
             {sideBarOpen}
-          </div>
+          </button>
         </div>
-        <div className="flex p-3 border">
+        <div className="flex pt-3 px-3 border-t-2 border-b-2">
           {routes.map((index) => {
             return (
               <>
