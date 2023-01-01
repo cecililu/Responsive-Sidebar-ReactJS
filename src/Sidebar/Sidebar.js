@@ -9,24 +9,13 @@ import {
 } from "react-icons/ai";
 import "../App.css";
 import { Alert } from "./Alert";
+import { Chart } from './Chart'
+import { Event } from "./Event";
 
-const routes = [
-  {
-    name: "Alert",
-    icon: <AiFillAlert />,
-  },
-  {
-    name: "Events",
-    icon: <AiFillEnvironment />,
-  },
-  ,
-  {
-    name: "Charts",
-    icon: <AiFillSignal />,
-  },
-];
 
 export const Sidebar = ({ children }) => {
+  
+
   const [sideBarOpen, setsideBarOpen] = useState(
     <AiOutlineDoubleLeft size={10} />
     
@@ -47,7 +36,36 @@ export const Sidebar = ({ children }) => {
       setsideBarOpen(<AiOutlineDoubleLeft size={10} />);
     }
   };
- const [selectedOption, setselectedOption] = useState()
+ const [selectedOption, setselectedOption] = useState(<Alert/>)
+ 
+ const handletoggleAlert=(event)=>{
+    setselectedOption(<Alert/>)
+ }
+ const handletoggleChart=(event)=>{
+  setselectedOption(<Chart/>)
+}
+
+const handletoggleEvent=(event)=>{
+  setselectedOption(<Event/>)
+}
+const routes = [
+  {
+    name: "Alert",
+    icon: <AiFillAlert />,
+    handler:handletoggleAlert
+  },
+  {
+    name: "Events",
+    icon: <AiFillEnvironment />,
+    handler:handletoggleEvent
+  },
+  ,
+  {
+    name: "Charts",
+    icon: <AiFillSignal />,
+    handler:handletoggleChart
+  },
+];
   return (
     <div className="sidebar-container ">
       <motion.div animate={{ width: "500px" }} className="side-bar">
@@ -66,7 +84,7 @@ export const Sidebar = ({ children }) => {
         <div className="flex pt-3 px-3  ">
           {routes.map((index) => {
             return (
-                <div key={index.name} className="p-7 mr-2  border-t-2 border-indigo-600 hover:bg-gray-300 hover:text-white cursor-pointer">
+                <div key={index.name} className="p-7 mr-2  border-t-2 border-indigo-600 hover:bg-gray-300 hover:text-white cursor-pointer"  onClick={index.handler}>
                   <center>
                     <span>{index.icon}</span>
                   </center>
@@ -81,9 +99,8 @@ export const Sidebar = ({ children }) => {
         
         </div>
           
-        </div>
-        
-        <Alert/>
+        </div>   
+        {selectedOption}
       </motion.div>
     
     </div>
