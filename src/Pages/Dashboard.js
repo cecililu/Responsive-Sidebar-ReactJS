@@ -40,12 +40,12 @@ export const Dashboard = () => {
        <div>
        <MainMap/>
       </div>
-      <div className="flex flex-col justify-center bg-indigo-900 text-white w-full  ">
+      <div className="flex flex-col justify-center text-white w-24 bg-indigo-900 ">
       {routes.map((index) => {
             return (
               <center>
             
-                <div key={index.name} className="p-5 border-b-2 border-white-600 hover:bg-gray-400 hover:text-white cursor-pointer">
+                <div key={index.name} className="p-5 border-b-2 bg-gray-500 border-white-600 hover:bg-gray-400 hover:text-white cursor-pointer">
                   
                     <span>{index.icon}</span>
                   
