@@ -24,17 +24,17 @@ export const options = {
   indexAxis: 'y' ,
   elements: {
     bar: {
-      borderWidth: 2,
+      borderWidth: 3,
     },
   },
   responsive: true,
   plugins: {
     legend: {
-      position: 'right' ,
+      position: 'bottom' ,
     },
     title: {
       display: true,
-      text: 'Chart.js Horizontal Bar Chart',
+      text: 'Diaster chart month wise',
     },
   },
 };
@@ -45,10 +45,10 @@ export const data = {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
+      label: 'Disaster',
       data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      borderColor: 'rgba(0, 0, 153, 1.0)',
+      backgroundColor: 'rgba(0, 0, 153, 1.0)',
     },
   ],
 };
@@ -56,7 +56,7 @@ export const data = {
 
 export const Chart = () => {
   return (
-    <div><Bar options={options} data={data} /></div>
+    <div className='mt-5 p-4 bg-indigo-100'><span></span><Bar options={options} data={data} /></div>
   )
 }
 

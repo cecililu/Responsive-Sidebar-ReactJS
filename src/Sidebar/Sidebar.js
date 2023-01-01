@@ -100,7 +100,8 @@ const routes = [
         </div>
           
         </div>   
-        {selectedOption}
+        
+     <div className="p-0"> {selectedOption}</div>
       </motion.div>
     
     </div>
