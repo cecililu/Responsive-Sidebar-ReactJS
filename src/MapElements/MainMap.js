@@ -200,17 +200,17 @@ export const MainMap = ({ resizer }) => {
           >
             <Popup>
               <div class="">
-                <div class="bg-indigo-700 text-white text-md">{cluster.properties.category}<br/></div>
+                <div class="bg-indigo-700 text-white text-md border-gray-200 border-t-2 pt-3 "><center><h1>{cluster.properties.category}</h1></center><br/></div>
                 
-                <div class="text-black-900 text-sm ">Fire in the forest of Godawari</div>
+                <div class="text-black-900 text-sm mt-3">Fire in the forest of Godawari</div>
                 <div className="border-gray-200 border-b-2 p-3 hover:bg-gray-200 py-4">
-                 <div className="text-md font-medium flex flex-row ">
-              <div className="text-red-700 text-sm flex flex-col">
+                 <div className="text-md font-medium flex flex-row  ">
+              <div className="text-red-700 text-sm flex flex-col  border-indigo-300 border-r-2 pr-4">
                  <span className="px-2"> <AiFillFire size={30} /></span>
-                <p className="text-xs">Fire</p>
+                <p className="text-xs pl-3">Fire</p>
               </div>
               <span className="font-normal ml-5 pt-1 text-sm">
-              <div className="font-semibold"> kyonjan Municipality</div>
+              <div className="font-semibold "> Kyonjan Municipality</div>
               <div>
               <div className="text-xs  text-gray-500 flex justify-start ">
               <span className="">2023/1/23</span>
