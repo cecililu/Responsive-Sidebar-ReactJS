@@ -10,16 +10,54 @@ import "leaflet/dist/leaflet.css";
 import useSupercluster from "use-supercluster";
 import district from "./LalitpurGEOJSON.json";
 import L from "leaflet";
-import leaf from "./leaf-green.png";
+import fire from "./fire.png";
 
 var greenIcon = L.icon({
-  iconUrl: leaf,
-  iconSize: [18, 45], // size of the icon
-  shadowSize: [50, 64], // size of the shadow
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  shadowAnchor: [4, 62], // the same for the shadow
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
 });
+var redIcon = L.icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+var blueIcon = L.icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+var blackIcon = L.icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+const getIcon=(type)=>{
+  switch (type){
+    case 'Flood':
+      return blueIcon;
+    case 'Fire':
+      return redIcon
+    case 'LandSlide':
+      return blackIcon
+    case 'Other':
+      return greenIcon
+    default:
+      return greenIcon
+  }
+}
 
 export const MainMap = ({ resizer }) => {
   const icons = {};
@@ -79,10 +117,14 @@ export const MainMap = ({ resizer }) => {
   
   //get this from the server
   const events = [
-    [27.55001, 85.31],
-    [27.55902, 85.3],
-    [27.55, 85.32],
-    [27.55403, 85.31],
+    [27.55001, 85.31,'Landslide'],
+    [27.55902, 85.3,'Fire'],
+    [27.55, 85.32,'Flood'],
+    [27.55403, 85.31,'Others'],
+    [27.45, 85.33,'Others'],
+    [27.4521, 85.3312,'Others'],
+    [27.503, 85.33,'Fire'],
+    [27.503, 85.333,'Flood'],
   ];
   const maxZoom = 22;
   const points = events.map((ev) => {
@@ -91,7 +133,7 @@ export const MainMap = ({ resizer }) => {
       properties: {
         cluster: false,
         crimeId: ev[0],
-        category: "anti-social-behaviour",
+        category: ev[2],
       },
       geometry: {
         type: "Point",
@@ -149,9 +191,9 @@ export const MainMap = ({ resizer }) => {
         // we have a single point (crime) to render
         return (
           <Marker
-            key={`crime-${cluster.properties.crimeId}`}
+            key={`disaster-${cluster.properties.crimeId}`}
             position={[latitude, longitude]}
-            icon={greenIcon}
+            icon={getIcon(cluster.properties.category)}
           />
         );
       })}

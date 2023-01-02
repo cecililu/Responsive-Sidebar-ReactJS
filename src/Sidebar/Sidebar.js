@@ -18,7 +18,7 @@ export const Sidebar = ({ children ,setresizer,resizer}) => {
   
   
   const [sideBarOpen, setsideBarOpen] = useState(
-    [<AiOutlineDoubleRight size={10} />,0]
+    [<AiOutlineDoubleLeft size={10} />,1]
   );
   console.log(sideBarOpen, "state now");
   const handlerSideBarOpen = () => {
