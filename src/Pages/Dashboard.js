@@ -53,7 +53,9 @@ export const Dashboard = () => {
           })}
       </div>
       <div>
-       <MainMap resizer={resizer}/>
+       <MapContainer center={[27.5500, 85.31]} zoom={11} scrollWheelZoom={false}  >
+        <MainMap resizer={resizer}/>
+       </MapContainer>
       </div>
     </div>
    

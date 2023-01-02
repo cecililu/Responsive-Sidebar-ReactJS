@@ -1,0 +1,21 @@
+.leaflet-container{
+    width:100vw;
+    height:100vh
+}
+
+.leaflet-div-icon{
+    background: none !important;
+    border: none !important;
+}
+.cluster-marker{
+    
+    color:#fff;
+    background: rgb(14, 14, 95);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
