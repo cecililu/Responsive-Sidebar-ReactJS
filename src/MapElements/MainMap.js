@@ -1,9 +1,12 @@
+import { AiFillFire } from "react-icons/ai";
+import {BiAlarm} from "react-icons/bi";
 import {
   TileLayer,
   MapContainer,
   GeoJSON,
   Marker,
   useMap,
+  Popup,
 } from "react-leaflet";
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import "leaflet/dist/leaflet.css";
@@ -194,7 +197,41 @@ export const MainMap = ({ resizer }) => {
             key={`disaster-${cluster.properties.crimeId}`}
             position={[latitude, longitude]}
             icon={getIcon(cluster.properties.category)}
-          />
+          >
+            <Popup>
+              <div class="">
+                <div class="bg-indigo-700 text-white text-md">{cluster.properties.category}<br/></div>
+                
+                <div class="text-black-900 text-sm ">Fire in the forest of Godawari</div>
+                <div className="border-gray-200 border-b-2 p-3 hover:bg-gray-200 py-4">
+                 <div className="text-md font-medium flex flex-row ">
+              <div className="text-red-700 text-sm flex flex-col">
+                 <span className="px-2"> <AiFillFire size={30} /></span>
+                <p className="text-xs">Fire</p>
+              </div>
+              <span className="font-normal ml-5 pt-1 text-sm">
+              <div className="font-semibold"> kyonjan Municipality</div>
+              <div>
+              <div className="text-xs  text-gray-500 flex justify-start ">
+              <span className="">2023/1/23</span>
+              <div className="flex items-center px-2">
+                <span>
+                  <BiAlarm />
+                </span>
+                <span className="pl-1">4:55</span>
+              </div>
+            </div>
+              </div>
+                
+              </span>
+              
+            </div>
+            
+           
+          </div>
+              </div>
+            </Popup>
+          </Marker>
         );
       })}
     
