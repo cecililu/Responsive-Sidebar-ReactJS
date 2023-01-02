@@ -75,7 +75,9 @@ export const MainMap = ({ resizer }) => {
     }
     return icons[count];
   };
-
+// ?asdasd
+     
+// asdasd
   const layerurl =
     "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png";
 
@@ -113,8 +115,6 @@ export const MainMap = ({ resizer }) => {
       map.off("move", onMove);
     };
   }, [map, onMove]);
-
-  useEffect(() => {});
 
   const [zoom, setzoom] = useState(12);
   
