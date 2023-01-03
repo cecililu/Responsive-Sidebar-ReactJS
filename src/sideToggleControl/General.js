@@ -65,7 +65,7 @@ const handletoggleAlert = (event) => {
               </div>
             );
           })}    
-            <div className="ml-10 flex flex-col p-2">
+            <div className=" flex flex-col p-2">
             <span className="text-gray-700 text-[11px]">
               Date: 2022/2/3- 2022/4/3
             </span>
