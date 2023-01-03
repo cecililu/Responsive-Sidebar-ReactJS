@@ -26,7 +26,7 @@ const data = [
 ];
 export const Alert = () => {
   return (
-    <div className="bg-gray-100   border-t-2 mt-4">
+    <div className="bg-gray-100  border-t-2 mt-4">
       {data.map((ind) => {
         return (
           <div className="border-gray-200 border-b-2 p-3 hover:bg-gray-200 py-4">

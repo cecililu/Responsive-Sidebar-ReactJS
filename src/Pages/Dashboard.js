@@ -34,7 +34,7 @@ import { Profile } from "../sideToggleControl/Profile";
 
 
 export const Dashboard = () => {
-  const [selectedMainOption, setselectedMainOption] = useState(<LiveData/>);
+  const [selectedMainOption, setselectedMainOption] = useState(<General/>);
   const handleDashboard=()=>{
     console.log("Clicked")
     setselectedMainOption(<General/>)
@@ -129,7 +129,7 @@ const routes = [
               <center>
                 <div
                   key={index.name}
-                  className="p-2 border-b-2 bg-indigo-900 border-white-600 hover:bg-indigo-800 hover:text-white cursor-pointer"
+                  className="p-1 border-b-2 bg-indigo-900 border-white-600 hover:bg-indigo-800 hover:text-white cursor-pointer"
                 onClick={index.handleClick}>
                  
                   <span>{index.icon}</span>

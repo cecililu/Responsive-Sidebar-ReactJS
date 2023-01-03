@@ -49,6 +49,7 @@ const handletoggleAlert = (event) => {
   ];
 
   return (
+    <div>
   <div className="flex p-2 pt-10 mt-2 pl-3 bg-gray-200">
   {routes.map((index) => {
             return (
@@ -72,15 +73,19 @@ const handletoggleAlert = (event) => {
               Source:{" "}
               <center>
                 <div className="bg-red-700 text-white text-[11px] rounded-lg w-1/3">
-                  {" "}
                   Live
                 </div>
               </center>
             </div>
           </div>
-        
-
-        <div className="p-0"></div>  
+           
+          <div>
+            
+          </div>
+       
+ </div>
+  {selectedOption}
+  
  </div>
   )
 }
