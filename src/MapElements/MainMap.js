@@ -68,7 +68,7 @@ export const MainMap = ({ resizer }) => {
   const fetchIcons = (count, size) => {
     if (!icons[count]) {
       icons[count] = L.divIcon({
-        html: `<div class="cluster-marker" style="width: ${size}px; height: ${size}px;">
+        html: `<div class="cluster-marker " style="width: ${size}px; height: ${size}px;">
           ${count}
         </div>`,
       });

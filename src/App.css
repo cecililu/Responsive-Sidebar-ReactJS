@@ -7,10 +7,11 @@
     background: none !important;
     border: none !important;
 }
+
 .cluster-marker{
-    
+
     color:#fff;
-    background: rgb(14, 14, 95);
+    background: rgb(17, 17, 117);
     border-radius: 50%;
     width: 10px;
     height: 10px;

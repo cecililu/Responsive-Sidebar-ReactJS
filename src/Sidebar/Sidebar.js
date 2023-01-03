@@ -78,7 +78,8 @@ export const Sidebar = ({ children ,setresizer,resizer}) => {
           <button className="bg-red-600 m-1 rounded-full hover:rounded-lg p-2 " >
             {sideBarOpen[0]}
           </button></div>:''}
-        { sideBarOpen[1]?<>
+        { sideBarOpen[1]?
+        <>
           
         <div className="bg-indigo-900 text-sm text-white px-2 py-5 border-dotted border-r-2 border-white" >
           <p className="pl-2">Lalitpur District Disaster Portal</p>
@@ -91,39 +92,8 @@ export const Sidebar = ({ children ,setresizer,resizer}) => {
             {sideBarOpen[0]}
           </button>
         </div>
-        <div className="flex pt-3 px-3  ">
-          {routes.map((index) => {
-            return (
-              <div
-                key={index.name}
-                className="p-7 mr-2  border-t-2 border-indigo-600 hover:bg-gray-300 hover:text-white cursor-pointer"
-                onClick={index.handler}
-              >
-                <center>
-                  <span>{index.icon}</span>
-                </center>
-                <p className="text-[12px] pt-1">{index.name}</p>
-              </div>
-            );
-          })}
-          <div className="ml-10 flex flex-col p-2">
-            <span className="text-gray-700 text-[11px]">
-              Date: 2022/2/3- 2022/4/3
-            </span>
-            <div className="text-gray-700 text-[11px] ">
-              Source:{" "}
-              <center>
-                <div className="bg-red-700 text-white text-[11px] rounded-lg w-1/3">
-                  {" "}
-                  Live
-                </div>
-              </center>
-            </div>
-          </div>
-        </div>
-
-        <div className="p-0"> {selectedOption}</div>
-        </>:null}
+           </>
+        :''}
       </motion.div>
     </div>
   );
