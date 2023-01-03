@@ -22,7 +22,7 @@ import {
 import {MdSpaceDashboard,MdCellWifi} from 'react-icons/md'
 import {RiProfileLine} from 'react-icons/ri'
 import {GoReport} from 'react-icons/go'
-import { Legend } from "./Legend";
+import  Legend  from "./Legend";
 import { General } from "../sideToggleControl/General";
 import { LiveData } from "../sideToggleControl/LiveData";
 
