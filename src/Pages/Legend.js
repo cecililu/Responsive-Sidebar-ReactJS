@@ -15,7 +15,7 @@ const map = useMap();
   };
   legend.addTo(map);
   };
-  addL()
+  
   console.log(map,'map form Legend')
   return (
     <div></div>

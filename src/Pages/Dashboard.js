@@ -23,50 +23,91 @@ import {MdSpaceDashboard,MdCellWifi} from 'react-icons/md'
 import {RiProfileLine} from 'react-icons/ri'
 import {GoReport} from 'react-icons/go'
 import { Legend } from "./Legend";
+import { General } from "../sideToggleControl/General";
+import { LiveData } from "../sideToggleControl/LiveData";
+import { Chart } from "../sideToggleControl/Chart";
+import { Report } from "../sideToggleControl/Report";
+import { Login } from "../sideToggleControl/Login";
+import { WebService } from "../sideToggleControl/WebService";
+import { Profile } from "../sideToggleControl/Profile";
 
-const handleDashboard=()=>{}
-const handleLiveData=()=>{}
-const handleCharts=()=>{}
-const handleReport=()=>{}
-const handleLogin=()=>{}
-const handleProfile=()=>{}
-const handleWebServices=()=>{}
+
+
+export const Dashboard = () => {
+  const [selectedMainOption, setselectedMainOption] = useState(<LiveData/>);
+  const handleDashboard=()=>{
+    console.log("Clicked")
+    setselectedMainOption(<General/>)
+  }
+  const handleLiveData=()=>{
+    console.log("Clicked")
+    setselectedMainOption(<LiveData/>)
+  }
+  const handleCharts=()=>{
+    console.log("Clicked")
+    setselectedMainOption(<Chart/>)
+  }
+  const handleReport=()=>{
+    console.log("Clicked")
+    setselectedMainOption(<Report/>)
+  }
+  const handleLogin=()=>{
+    console.log("Clicked")
+    setselectedMainOption(<Login/>)
+  }
+  
+  const handleProfile=()=>{
+    console.log("Clicked")
+    setselectedMainOption(<Profile/>)
+  }
+  const handleWebServices=()=>{
+    console.log("Clicked")
+    setselectedMainOption(<WebService/>)
+  }
+  
+
 
 const routes = [
   {
     name: "Dashboard",
     icon: <MdSpaceDashboard size={19} />,
+    handleClick:handleDashboard
   },
   {
     name: "Live Data",
     icon: <MdCellWifi size={19} />,
+    handleClick:handleLiveData
   },
   ,
   {
     name: "Charts",
     icon: <AiFillSignal size={19} />,
+    handleClick:handleCharts
   },
   {
     name: "Report an event",
     icon: <GoReport size={19} />,
+    handleClick:handleReport
   },
   {
      name: "Login",
      icon: <AiOutlineLogin size={19} />,
+     handleClick:handleLogin
   },
   {
     name: "Profile",
     icon: <RiProfileLine size={19} />,
+    handleClick:handleProfile
  },
  {
   name: "Web Services",
   icon: <RiProfileLine size={19} />,
+  handleClick:handleWebServices
 },
 ];
-
-export const Dashboard = () => {
+  
   const [resizer, setresizer] = useState("142vh");
-
+  
   // const mapRef = useRef();
   
   // useEffect(() => {
@@ -77,7 +118,9 @@ export const Dashboard = () => {
     <div className="static">
       <div className="flex  ">
         <div>
-          <Sidebar setresizer={setresizer} resizer={resizer} />
+          <Sidebar setresizer={setresizer} resizer={resizer} >
+            {selectedMainOption}
+          </Sidebar>
         </div>
 
         <div className="flex flex-col justify-center text-white  bg-indigo-900 ">
@@ -87,7 +130,8 @@ export const Dashboard = () => {
                 <div
                   key={index.name}
                   className="p-2 border-b-2 bg-indigo-900 border-white-600 hover:bg-indigo-800 hover:text-white cursor-pointer"
-                onClick={routes.handleClick}>
+                onClick={index.handleClick}>
+                 
                   <span>{index.icon}</span>
                   <p className="text-[10px] pt-1">{index.name}</p>
                 </div>
@@ -110,5 +154,6 @@ export const Dashboard = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+        }
+        

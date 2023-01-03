@@ -9,7 +9,7 @@ import {
 } from "react-icons/ai";
 import "../App.css";
 import { Alert } from "./Alert";
-import { Chart } from "./Chart";
+import { Chart } from "../sideToggleControl/Chart";
 import { Event } from "./Event";
 
 export const Sidebar = ({ children ,setresizer,resizer}) => {
@@ -94,6 +94,7 @@ export const Sidebar = ({ children ,setresizer,resizer}) => {
         </div>
            </>
         :''}
+        {children}
       </motion.div>
     </div>
   );

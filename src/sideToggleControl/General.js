@@ -1,4 +1,4 @@
-import React from 'react'
+
 import React, { useState } from "react";
 
 import {
@@ -10,45 +10,46 @@ import {
 } from "react-icons/ai";
 
 import "../App.css";
-import { Alert } from "./Alert";
-import { Chart } from "./Chart";
-import { Event } from "./Event";
+import { Alert } from "../Sidebar/Alert";
+import { Chart } from "../Sidebar/Chart";
+import { Event } from "../Sidebar/Event";
 
-const [selectedOption, setselectedOption] = useState(<Alert />);
 
-const handletoggleAlert = (event) => {
-  setselectedOption(<Alert />);
-};
-const handletoggleChart = (event) => {
-  setselectedOption(<Chart />);
-};
 
-const handletoggleEvent = (event) => {
-  setselectedOption(<Event />);
-};
-const routes = [
-  {
-    name: "Alert",
-    icon: <AiFillAlert />,
-    handler: handletoggleAlert,
-  },
-  {
-    name: "Events",
-    icon: <AiFillEnvironment />,
-    handler: handletoggleEvent,
-  },
-  ,
-  {
-    name: "Charts",
-    icon: <AiFillSignal />,
-    handler: handletoggleChart,
-  },
-];
 
 export const General = () => {
 const [selectedOption, setselectedOption] = useState(<Alert />);
+const handletoggleAlert = (event) => {
+    setselectedOption(<Alert />);
+  };
+  const handletoggleChart = (event) => {
+    setselectedOption(<Chart />);
+  };
+  
+  const handletoggleEvent = (event) => {
+    setselectedOption(<Event />);
+  };
+  const routes = [
+    {
+      name: "Alert",
+      icon: <AiFillAlert />,
+      handler: handletoggleAlert,
+    },
+    {
+      name: "Events",
+      icon: <AiFillEnvironment />,
+      handler: handletoggleEvent,
+    },
+    ,
+    {
+      name: "Charts",
+      icon: <AiFillSignal />,
+      handler: handletoggleChart,
+    },
+  ];
+
   return (
-  <>
+  <div className="flex p-2 pt-10 mt-2 pl-3 bg-gray-200">
   {routes.map((index) => {
             return (
               <div
@@ -79,7 +80,7 @@ const [selectedOption, setselectedOption] = useState(<Alert />);
           </div>
         
 
-        <div className="p-0">{selectedOption}</div>  
- </>
+        <div className="p-0"></div>  
+ </div>
   )
 }
