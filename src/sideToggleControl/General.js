@@ -49,13 +49,14 @@ const handletoggleAlert = (event) => {
   ];
 
   return (
-    <div>
-  <div className="flex p-2 pt-10 mt-2 pl-3 bg-gray-200">
+    <div className="px-6">
+  <div className="flex pt-10 mt-2 pl-3 bg-gray-200 ">
+    
   {routes.map((index) => {
             return (
               <div
                 key={index.name}
-                className="p-7 mr-2  border-t-2 border-indigo-600 hover:bg-gray-300 hover:text-white cursor-pointer"
+                className="p-5 mr-2  border-t-2 border-indigo-600 hover:bg-gray-300 hover:text-white cursor-pointer"
                 onClick={index.handler}
               >
                 <center>

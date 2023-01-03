@@ -25,11 +25,12 @@ import {GoReport} from 'react-icons/go'
 import { Legend } from "./Legend";
 import { General } from "../sideToggleControl/General";
 import { LiveData } from "../sideToggleControl/LiveData";
-import { Chart } from "../sideToggleControl/Chart";
+
 import { Report } from "../sideToggleControl/Report";
 import { Login } from "../sideToggleControl/Login";
 import { WebService } from "../sideToggleControl/WebService";
 import { Profile } from "../sideToggleControl/Profile";
+import { Graph } from "../sideToggleControl/Graph";
 
 
 
@@ -45,7 +46,7 @@ export const Dashboard = () => {
   }
   const handleCharts=()=>{
     console.log("Clicked")
-    setselectedMainOption(<Chart/>)
+    setselectedMainOption(<Graph/>)
   }
   const handleReport=()=>{
     console.log("Clicked")

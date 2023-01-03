@@ -9,7 +9,7 @@ import {
 } from "react-icons/ai";
 import "../App.css";
 import { Alert } from "./Alert";
-import { Chart } from "../sideToggleControl/Chart";
+import { Chart } from "./Chart";
 import { Event } from "./Event";
 
 export const Sidebar = ({ children ,setresizer,resizer}) => {
