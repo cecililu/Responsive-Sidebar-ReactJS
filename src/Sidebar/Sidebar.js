@@ -82,7 +82,8 @@ export const Sidebar = ({ children ,setresizer,resizer}) => {
         <>
           
         <div className="bg-indigo-900 text-sm text-white py-2  border-dotted border-r-2 border-white flex" >
-          <p className=" pl-2 text-white text-bold py-0 ">Lalitpur District Disaster Portal</p>
+          <center className="px-20"><p className=" pl-20  text-white text-xs text-semibold py-0 ">Lalitpur District Disaster Portal</p>
+          </center>
         </div>
         <div
           className="text-white flex justify-end border-rounded cursor-pointer "
