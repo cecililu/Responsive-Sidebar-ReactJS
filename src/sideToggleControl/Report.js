@@ -25,8 +25,8 @@ export const Report = ({}) =>
 //       getRatingandType()
 //    },[])
   return (
-    <div className=''>
-        <div className='flex justify-center'>
+    <div className='bg-gray-200 mt-2 px-3 w-full'>
+        <div className=''>
         <span className='text-teal-600 text-xl  '>Report a disaster data</span>
         </div>
     <div class="flex justify-center"> 

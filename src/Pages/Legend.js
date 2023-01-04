@@ -12,7 +12,7 @@ const Legend = () => {
     div.innerHTML += "<div class='text-xs flex m-2'><p class='mr-2 bg-red-600 text-red-600 '>test</p><span className='mx-2 '>Fire</span></div>";
     div.innerHTML += "<div class='text-xs flex m-2'><p class='mr-2 bg-blue-600 text-blue-600'>test</p><span className='mx-2 '>Flood</span></div>"
     div.innerHTML += "<div class='text-xs flex m-2'><p class='mr-2 bg-green-600 text-green-600'>test</p><span className='mx-2 '>Other</span></div>"
-    div.innerHTML += "<div class='text-xs flex m-2'><p class='mr-2 bg-yellow-500 text-yellow-500 border-full'>test</p><span className='mx-2 '>Disaster Cluster</span></div>"
+    div.innerHTML += "<div class='text-xs flex m-2'><p class='mr-2 bg-yellow-200 text-yellow-200 rounded-full '>test</p><span className='mx-2 '>Disaster Cluster</span></div>"
     return div;
   };
   legend.addTo(map);

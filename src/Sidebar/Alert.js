@@ -26,10 +26,10 @@ const data = [
 ];
 export const Alert = () => {
   return (
-    <div className="bg-gray-100  border-t-2 m-0">
+    <div className="bg-gray-100  border-t-2 pt-6">
       {data.map((ind) => {
         return (
-          <div className="border-gray-200 border-b-2 p-3 hover:bg-gray-200 py-4">
+          <div className="border-gray-100 border-b-2 p-3 hover:bg-gray-200 py-4">
             <div className="text-md font-medium flex flex-row ">
               <div className="text-red-700 text-sm flex flex-col">
                  <span className="px-2"> <AiFillFire size={30} /></span>

@@ -74,7 +74,7 @@ export const Graph = () => {
     setchartData(chartData);
   }, []);
 
-  return (<div className='p-6'>
+  return (<div className='mt-10'>
   
   <div className="bg-gray-200 border-b py-3 flex justify-center">
            <span> Data of the Occurance of event</span>
