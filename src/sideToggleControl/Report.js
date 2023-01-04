@@ -25,7 +25,7 @@ export const Report = ({}) =>
 //       getRatingandType()
 //    },[])
   return (
-    <div className='bg-gray-100  h-screen pt-2 mt-9'>
+    <div className='bg-gray-100  p-10 pt-2 mt-9'>
        <center className='pt-2'>
         <span className='text-indigo-900 text-xl '>Report a disaster data</span>
       </center> 

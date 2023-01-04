@@ -1,6 +1,6 @@
 import React from "react";
 import { BiAlarm } from "react-icons/bi";
-import { AiFillFire } from "react-icons/ai";
+import { AiFillFire, AiFillInfoCircle } from "react-icons/ai";
 const data = [
   {
     ward: "Ward 1",
@@ -26,17 +26,17 @@ const data = [
 ];
 export const Alert = () => {
   return (
-    <div className="bg-gray-100  border-t-2 pt-6">
+    <div className="bg-gray-100  border-t-2 pt-2">
       {data.map((ind) => {
         return (
-          <div className="border-gray-100 border-b-2 p-3 hover:bg-gray-200 py-4">
+          <div className="border-gray-200 border-b-2 p-3 hover:bg-gray-200 py-4">
             <div className="text-md font-medium flex flex-row ">
-              <div className="text-red-700 text-sm flex flex-col">
-                 <span className="px-2"> <AiFillFire size={30} /></span>
+              <div className="text-red-500 text-sm flex flex-col">
+                 <span className="px-3"> <AiFillInfoCircle size={20} /></span>
                 <p className="text-xs">{ind.type}</p>
               </div>
               <span className="font-normal ml-5 pt-1 text-sm">
-              <div className="font-semibold"> {ind.municipality}</div>
+              <div className="font-semibold text-xs"> {ind.municipality}</div>
               <div>
               <div className="text-xs  text-gray-500 flex justify-start ">
               <span className="">{ind.date}</span>
