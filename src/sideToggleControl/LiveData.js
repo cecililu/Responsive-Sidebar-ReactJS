@@ -3,9 +3,22 @@ import React from 'react'
 export const LiveData = () => {
     const data=[1,2,3,4,5]
   return (
-    <div>
-  <div className="flex flex-col mt-10">
-  <div className="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
+    <div >
+    <div className=" flex flex-col p-2 bg-gray-200 mt-9 py-5" >
+            <div className="text-gray-700 text-[11px]">
+              Date: 2022/2/3- 2022/4/3
+            </div>
+            <div className="text-gray-700 text-[11px] ">
+              <span className='mr-3'>Source:</span>
+              
+                <p className=" inline px-2 bg-red-700 text-white text-[11px] rounded-lg w-1/3">
+                  Live
+                </p>
+              
+            </div>
+          </div>
+  <div className="flex flex-col mt-0">
+  <div className="">
     <div className="py-2 inline-block min-w-full ">
       <div className="overflow-hidden">
         <table className="min-w-full">
