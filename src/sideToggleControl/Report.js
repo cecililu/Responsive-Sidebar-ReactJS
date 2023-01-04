@@ -4,8 +4,8 @@ import { Formik } from 'formik';
 export const Report = ({}) => 
  {  
     const latlng={
-        lat:234,
-        lng:123
+        lat:23.4,
+        lng:85.99
     }
     // console.log(latlng.lat)
    const [type, settype] = useState([])
@@ -25,12 +25,13 @@ export const Report = ({}) =>
 //       getRatingandType()
 //    },[])
   return (
-    <div className='bg-gray-200 mt-2 px-3 w-full'>
-        <div className=''>
-        <span className='text-teal-600 text-xl  '>Report a disaster data</span>
-        </div>
-    <div class="flex justify-center"> 
-    <div class="">
+    <div className='bg-gray-100  h-screen pt-2 mt-9'>
+       <center className='pt-2'>
+        <span className='text-indigo-900 text-xl '>Report a disaster data</span>
+      </center> 
+        
+    <div class="px-8"> 
+    <div class="mt-5">
     <Formik
        initialValues={{ disaster: '', Comment: '',address:'',type:'',rating:'' }}
        onSubmit={async(value)=>{
@@ -64,16 +65,17 @@ export const Report = ({}) =>
          /* and other goodies */
        }) => (
     <form>
-    <label for="exampleFormControlInput1" className="form-label inline-block mb-2 text-gray-700" >Disaster</label>
+    <label for="exampleFormControlInput1" className="form-label inline-block mb-1 text-sm text-indigo-900" >Disaster</label>
     <input type="text"
       className="
-       mb-5
+        text-xs
+        mb-2
         form-control
         block
         w-full
-        px-3
+        px-2
         py-1.5
-        text-base
+        text-xs
         font-normal
         text-gray-700
         bg-white bg-clip-padding
@@ -82,7 +84,7 @@ export const Report = ({}) =>
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+        focus:text-gray-700 focus:bg-white focus:border-indigo-700 focus:outline-none
       "
       id="exampleFormControlInput1"
       placeholder="Describe a Disaster"
@@ -91,26 +93,27 @@ export const Report = ({}) =>
       onChange={handleChange}
     />
     
-    <label for="exampleFormControlInput1" className="form-label inline-block mb-2 text-gray-700" >Address</label>
+    <label for="exampleFormControlInput1" className="form-label inline-block mb-1 text-sm text-indigo-900" >Address</label>
     <input type="text"
       class="
-       mb-5
-        form-control
-        block
-        w-full
-        px-3
-        py-1.5
-        text-base
-        font-normal
-        text-gray-700
-        bg-white bg-clip-padding
-        border border-solid border-gray-300
-        rounded
-        transition
-        ease-in-out
-        m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-      "
+      text-xs
+      mb-2
+      form-control
+      block
+      w-full
+      px-2
+      py-1.5
+      text-xs
+      font-normal
+      text-gray-700
+      bg-white bg-clip-padding
+      border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out
+      m-0
+      focus:text-gray-700 focus:bg-white focus:border-indigo-700 focus:outline-none
+    "
       id="exampleFormControlInput1"
       name='address'
       value={values.address}
@@ -118,16 +121,17 @@ export const Report = ({}) =>
       onChange={handleChange}
     />
 
-<label for="exampleFormControlInput2" className="form-label inline-block mb-2 text-gray-700" >Latitude</label>
+<label for="exampleFormControlInput2" className="form-label inline-block mb-1 text-sm text-indigo-900" >Latitude</label>
     <input type="text"
       className="
-      mb-5
+      text-xs
+        mb-2
         form-control
         block
         w-full
-        px-3
+        px-2
         py-1.5
-        text-base
+        text-xs
         font-normal
         text-gray-700
         bg-white bg-clip-padding
@@ -136,8 +140,8 @@ export const Report = ({}) =>
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-      "
+        focus:text-gray-700 focus:bg-white focus:border-indigo-700 focus:outline-none
+         "
       id="exampleFormControlInput2"
       placeholder="Enter Laltitude"
       name='lat'
@@ -145,52 +149,54 @@ export const Report = ({}) =>
       onChange={handleChange}
     />
 
-<label for="exampleFormControlInput1" className="form-label inline-block mb-2 text-gray-700" >Longitude</label>
+<label for="exampleFormControlInput1" className="form-label inline-block mb-1 text-sm text-indigo-900" >Longitude</label>
     <input type="text"
       className="
-       mb-5
-        form-control
-        block
-        w-full
-        px-3
-        py-1.5
-        text-base
-        font-normal
-        text-gray-700
-        bg-white bg-clip-padding
-        border border-solid border-gray-300
-        rounded
-        transition
-        ease-in-out
-        m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-      "
+      text-xs
+      mb-2
+      form-control
+      block
+      w-full
+      px-2
+      py-1.5
+      text-xs
+      font-normal
+      text-gray-700
+      bg-white bg-clip-padding
+      border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out
+      m-0
+      focus:text-gray-700 focus:bg-white focus:border-indigo-700 focus:outline-none
+     "
       id="exampleFormControlInput1"
       placeholder="Enter the longitude"
       name='long'
       value={latlng.lng}
       onChange={handleChange}
     />
-    <label for="exampleFormControlInput1" className="form-label inline-block mb-2 text-gray-700 " >Comment</label>
+    <label for="exampleFormControlInput1" className="form-label inline-block mb-1 text-sm text-indigo-900" >Comment</label>
     <input type="text"
-      className="h-15
-       mb-5
-        form-control
-        block
-        w-full
-        px-3
-        py-1.5
-        text-base
-        font-normal
-        text-gray-700
-        bg-white bg-clip-padding
-        border border-solid border-gray-300
-        rounded
-        transition
-        ease-in-out
-        m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-      "
+      className=" text-xs
+      h-20
+      mb-5
+      form-control
+      block
+      w-full
+      px-2
+      
+      text-xs
+      font-normal
+      text-gray-700
+      bg-white bg-clip-padding
+      border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out
+      m-0
+      focus:text-gray-700 focus:bg-white focus:border-indigo-700 focus:outline-none
+   "
       id="exampleFormControlInput1"
       placeholder="Add a comment"
       name='Comment'
@@ -274,8 +280,8 @@ export const Report = ({}) =>
        }):''}
       </select> */}
     
-    <div className='flex justify-center'>
-    <button class="bg-teal-500 hover:bg-teal-900 text-white font-bold py-2 px-4 rounded " type='submit' onClick={handleSubmit}> Add data</button>
+    <div className='flex justify-center mt-6'>
+    <button class="bg-indigo-900 hover:bg-indigo-700 text-white py-1 px-4 rounded-lg " type='submit' onClick={handleSubmit}> Add data</button>
     </div>
     </form>
        )}

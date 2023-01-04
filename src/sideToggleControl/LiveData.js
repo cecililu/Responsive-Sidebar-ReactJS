@@ -19,10 +19,10 @@ export const LiveData = () => {
           </div>
   <div className="flex flex-col mt-0">
   <div className="">
-    <div className="py-2 inline-block min-w-full ">
+    <div className="py-0 inline-block min-w-full ">
       <div className="overflow-hidden">
         <table className="min-w-full">
-          <thead className="bg-gray-200 border-b">
+          <thead className="bg-gray-100 border-b">
             <tr>
               <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                 #
