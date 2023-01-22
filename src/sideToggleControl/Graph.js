@@ -78,7 +78,7 @@ export const Graph = () => {
      <div className=" flex flex-col p-2 bg-gray-100 mt-9 py-5" >
             <div className="text-gray-700 text-[11px]">
               Date: 2022/2/3- 2022/4/3
-            </div>
+            </div>npm start
             <div className="text-gray-700 text-[11px] ">
               <span className='mr-3'>Source:</span>
               
@@ -88,7 +88,7 @@ export const Graph = () => {
               
             </div>
           </div>
-  <div className="bg-indigo-900 text-sm text-white py-1 flex justify-center">
+  <div className="bg-indigo-800 border-dotted border-white border-r-2 border-l-2 text-sm text-white py-1 flex justify-center">
             Data of the Occurance of event
           </div>
 

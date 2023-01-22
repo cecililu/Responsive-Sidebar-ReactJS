@@ -20,7 +20,7 @@ import {
   AiOutlineDoubleRight,
 } from "react-icons/ai";
 import {MdSpaceDashboard,MdCellWifi} from 'react-icons/md'
-import {RiProfileLine} from 'react-icons/ri'
+import {RiInformationFill, RiProfileLine} from 'react-icons/ri'
 import {GoReport} from 'react-icons/go'
 import  Legend  from "./Legend";
 import { General } from "../sideToggleControl/General";
@@ -31,6 +31,7 @@ import { Login } from "../sideToggleControl/Login";
 import { WebService } from "../sideToggleControl/WebService";
 import { Profile } from "../sideToggleControl/Profile";
 import { Graph } from "../sideToggleControl/Graph";
+import { InformationModeule } from "../sideToggleControl/InformationModeule";
 
 
 
@@ -65,7 +66,9 @@ export const Dashboard = () => {
     console.log("Clicked")
     setselectedMainOption(<WebService/>)
   }
-  
+  const handleInfoModule=()=>{
+    setselectedMainOption(<InformationModeule/>)
+  }
 
 
 const routes = [
@@ -105,6 +108,11 @@ const routes = [
   icon: <RiProfileLine size={19} />,
   handleClick:handleWebServices
 },
+{
+  name: "Information",
+  icon: <RiInformationFill size={19} />,
+  handleClick: handleInfoModule
+},
 ];
   
   const [resizer, setresizer] = useState("142vh");
@@ -116,7 +124,7 @@ const routes = [
   // }, [mapRef]);
   
   return (
-    <div className="static">
+    <div className="static bg-gray-100">
       <div className="flex  ">
         <div>
           <Sidebar setresizer={setresizer} resizer={resizer} >

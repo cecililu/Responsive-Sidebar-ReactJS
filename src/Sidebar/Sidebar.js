@@ -69,7 +69,7 @@ export const Sidebar = ({ children ,setresizer,resizer}) => {
     },
   ];
   return (
-    <div className="sidebar-container ">
+    <div className="sidebar-container bg-gray-200">
       <motion.div animate={{ width: sideBarOpen[1]?'500px':'30px'}} className="side-bar">
         {!sideBarOpen[1]?<div
           className="text-white flex justify-end border-rounded cursor-pointer "
