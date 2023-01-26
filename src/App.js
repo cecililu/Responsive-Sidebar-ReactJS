@@ -6,17 +6,19 @@ import { Sidebar } from "./Sidebar/Sidebar";
 import { MainMap } from "./MapElements/MainMap";
 import { MainPage } from "./Pages/MainPage";
 import { Legend } from "chart.js";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 function App() {
-  return (<>
-
-    <BrowserRouter>
-      
-        <Routes>
-          <Route path="/" element={<MainPage/>}></Route>
-        </Routes>
-    </BrowserRouter>
-    
+  return (
+    <>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MainPage />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </Provider>
     </>
   );
 }
