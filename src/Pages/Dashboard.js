@@ -69,8 +69,7 @@ export const Dashboard = () => {
   const handleInfoModule=()=>{
     setselectedMainOption(<InformationModeule/>)
   }
-
-
+  
 const routes = [
   {
     name: "Dashboard",
