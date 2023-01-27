@@ -59,7 +59,7 @@ export const LiveData = () => {
               
             </div>
           </div>
-          <tbody className=''>
+          
            {data.map((instance)=>{
 
             return ( 
@@ -97,13 +97,13 @@ export const LiveData = () => {
 
            })}
           
-          </tbody>
+         
         
       </div>
     </div>
   </div>
 </div>
-<center className='text-[12px] '>River Live Data</center>
+<center className='text-[12px] pb-1'>River Live Data</center>
   <div className="flex flex-col mt-0">
   <div className="">
     <div className="py-0 inline-block min-w-full ">
@@ -128,25 +128,25 @@ export const LiveData = () => {
               
             </div>
           </div>
-          <tbody className=''>
+          
            {data2.map((instance)=>{
 
             return ( 
-              <div className='  border-b-2 border-gray-300'>
+              <div className=' border-b-2 border-gray-300'>
             <div className="w-full   transition duration-300 ease-in-out bg-white flex justify-evenly pl-4">
-              <div className="text-[12px] text-gray-900 font-light px-8 py-4 whitespace-nowrap ">
+              <div className="text-[12px] text-gray-900 font-light px-1 py-4 whitespace-nowrap ">
                 {instance.id} 
               </div>
 
-              <div className="text-[12px] text-gray-900 font-light px-5 py-4 whitespace-nowra">
+              <div className="text-[12px] text-gray-900 font-light pl-7 py-4 whitespace-nowra">
                 {instance.title} 
               </div>
 
-              <div className="text-[12px] text-gray-900 font-light px-5 py-4 whitespace-nowrap pl-10 pr-10">
+              <div className="text-[12px] text-gray-900 font-light px-2 py-4 whitespace-nowrap pl-10 pr-10">
                 {instance.warningLevel?instance.warningLevel:'............'}
               </div>
               
-              <div className="text-[12px] text-gray-900 font-light px-6 py-4 whitespace-nowrap pl-10 pr-10">
+              <div className="text-[12px] text-gray-900 font-light px-2 py-4 whitespace-nowrap pl-10 pr-10">
                 {instance.dangerLevel}
               </div>
               
@@ -165,8 +165,6 @@ export const LiveData = () => {
             )
 
            })}
-          
-          </tbody>
         
       </div>
     </div>
