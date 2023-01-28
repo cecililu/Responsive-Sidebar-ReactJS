@@ -21,19 +21,6 @@ const status2=useSelector(state=>state.live.status)
         dispatch(WaterDataAsyncGETThunk())
     }}
       ,[dispatch,status2])
-// console.log('this is ddataasddd',data2,data2)
-
-// const [Opt,setOpt]=useState( <Pollution data={data}></Pollution>)
-
-// const handler=()=>{
-//   if (Opt==<Pollution data={data}></Pollution>){
-//       setOpt(<Water data2={data2}></Water>)
-//   }
-//   else{
-//     setOpt(<Pollution data={data}></Pollution>)
-//   }
-// }
-console.log('asdads',data[0].results)
   return (
     <div >
        <div className='flex justify-evenly text-xs py-2'>
@@ -41,7 +28,7 @@ console.log('asdads',data[0].results)
          <div  className='hover:bg-gray-100 px-10 py-2 w-full'>Water Level< GiFactory/>
            </div>
        </div>
-       {data[0].results &&data2[0].results?<><Water data2={data2[0].results}></Water>
+       {data[0]?.results &&data2[0]?.results?<><Water data2={data2[0].results}></Water>
         <Pollution data={data[0].results}></Pollution></>:''}
         
     </div>
