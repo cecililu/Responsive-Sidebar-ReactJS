@@ -6,7 +6,6 @@ import {
   GiFactory
 } from "react-icons/gi";
 import { useDispatch, useSelector } from 'react-redux';
-
 import { LivePollutionDataAsyncGETThunk, WaterDataAsyncGETThunk } from './LiveDataSlice';
 
 export const LiveData = () => {
@@ -34,7 +33,7 @@ const status2=useSelector(state=>state.live.status)
 //     setOpt(<Pollution data={data}></Pollution>)
 //   }
 // }
-// console.log('asdads',data[0].results)
+console.log('asdads',data[0].results)
   return (
     <div >
        <div className='flex justify-evenly text-xs py-2'>
@@ -42,7 +41,7 @@ const status2=useSelector(state=>state.live.status)
          <div  className='hover:bg-gray-100 px-10 py-2 w-full'>Water Level< GiFactory/>
            </div>
        </div>
-       {data&&data2?<><Water data2={data2[0].results}></Water>
+       {data[0].results &&data2[0].results?<><Water data2={data2[0].results}></Water>
         <Pollution data={data[0].results}></Pollution></>:''}
         
     </div>
