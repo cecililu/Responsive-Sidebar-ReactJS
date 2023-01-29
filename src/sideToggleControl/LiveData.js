@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import {
-  BiWater
-} from "react-icons/bi";
-import {
-  GiFactory
-} from "react-icons/gi";
+
+import {BiWater} from "react-icons/bi";
+import {GiFactory} from "react-icons/gi";
+
 import { useDispatch, useSelector } from 'react-redux';
 import { LivePollutionDataAsyncGETThunk, WaterDataAsyncGETThunk } from './LiveDataSlice';
+
 
 export const LiveData = () => {
   const dispatch=useDispatch()
   const data= useSelector(state=>state.live.pollution)
   const data2= useSelector(state=>state.live.water)
-
-const status2=useSelector(state=>state.live.status)
-
+  const status2=useSelector(state=>state.live.status)
   useEffect(()=>{
     if (status2 === "idle") {
         dispatch(LivePollutionDataAsyncGETThunk())
@@ -34,9 +31,6 @@ const status2=useSelector(state=>state.live.status)
     </div>
   )
 }
-
-
-
 export const Pollution = ({data}) => {
   return (<div>
     <center className='text-[12px] py-4'>Pollution Live Data</center>
